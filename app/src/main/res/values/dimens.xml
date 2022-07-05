@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_page_padding">20dp</dimen>
+
+    <dimen name="dimen_page_heading_text_size">24sp</dimen>
+    <dimen name="dimen_home_action_card_height">120dp</dimen>
+</resources>

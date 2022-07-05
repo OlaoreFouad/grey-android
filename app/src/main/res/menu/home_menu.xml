@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/item_home_state"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/repositoriesFragment"
+        android:icon="@drawable/item_repos_state"
+        android:title="@string/repositories" />
+    <item
+        android:id="@+id/usersFragment"
+        android:icon="@drawable/item_users_state"
+        android:title="@string/users" />
+
+</menu>
