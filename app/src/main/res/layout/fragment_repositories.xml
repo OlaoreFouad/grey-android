@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.features.repositories.RepositoriesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/page_heading"
+        style="@style/PageHeadingStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello repositories fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/repositories"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <dev.olaore.greyandroid.ui.common.views.GreySearchComponent
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/page_heading"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:inputPlaceholder="Search for repositories"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

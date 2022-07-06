@@ -3,15 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.4510416666666667" />
+        <entry key="app/src/main/res/drawable/bg_action_image.xml" value="0.153" />
+        <entry key="app/src/main/res/drawable/bg_border_black.xml" value="0.1745" />
+        <entry key="app/src/main/res/drawable/bg_border_grey.xml" value="0.2355" />
         <entry key="app/src/main/res/drawable/bg_light_purple.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_light_teal.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/bg_round_black.xml" value="0.179" />
         <entry key="app/src/main/res/drawable/ic_user_teal.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/item_home_state.xml" value="0.1275" />
         <entry key="app/src/main/res/drawable/item_repos_state.xml" value="0.1275" />
         <entry key="app/src/main/res/drawable/item_users_state.xml" value="0.1275" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_repositories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/component_grey_search.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_repositories.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/menu/home_menu.xml" value="0.4244791666666667" />
