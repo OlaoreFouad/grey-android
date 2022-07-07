@@ -8,6 +8,8 @@
     <string name="search">Search</string>
     <string name="no_data_available">No data available</string>
     <string name="search_github">Search Github for repositories, issues and pull requests!</string>
-    <string name="search_users">Search Github for users...</string>
+    <string name="search_users">Search Github for users…</string>
+    <string name="search_users_empty">We’ve searched the ends of the earth and we’ve not found this user, please try again</string>
     <string name="search_github_empty">We’ve searched the ends of the earth, repository not found, please try again</string>
+    <string name="user_details">%s \t %s</string>
 </resources>

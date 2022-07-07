@@ -21,13 +21,12 @@
             android:padding="10dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/repository_image"
+                android:id="@+id/user_image"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="10dp"
                 tools:background="@color/colorBlack"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/repository_description"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -41,9 +40,9 @@
                 android:textColor="@color/colorBlue"
                 android:fontFamily="@font/manrope_semibold"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/repository_image"
-                app:layout_constraintStart_toEndOf="@id/repository_image"
-                app:layout_constraintTop_toTopOf="@id/repository_image"
+                app:layout_constraintBottom_toBottomOf="@id/user_image"
+                app:layout_constraintStart_toEndOf="@id/user_image"
+                app:layout_constraintTop_toTopOf="@id/user_image"
                 tools:text="Paige Brown" />
 
             <TextView
@@ -76,7 +75,19 @@
                 app:layout_constraintStart_toStartOf="@id/user_username"
                 tools:text="These are random words that will be replaced in due time. Config files for my github profile" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/user_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorGrey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/user_bio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/user_username"
+                tools:text="Lagos, Nigeria  mamiwater@gmail.com" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

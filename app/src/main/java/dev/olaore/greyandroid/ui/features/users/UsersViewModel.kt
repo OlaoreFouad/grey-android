@@ -28,18 +28,13 @@ class UsersViewModel @Inject constructor (
         viewModelScope.launch {
             when (val result = gitHubRepository.getUsers(query)) {
                 is Result.Success -> {
-                    result.data.forEach {
-                        Log.d("UsersViewModel", it.toString())
-                    }
                     _state.value = DisplayUsers(users = result.data)
                 }
                 is Result.NetworkError -> {
-                    Log.d("UsersViewModel", "Error: Network Error")
-                    _state.value = UsersState.Error("Error: Network Error")
+                    _state.value = Error("Error: Network Error")
                 }
                 is Result.GenericError -> {
-                    Log.d("UsersViewModel", "Error: ${ result.response ?: "Something went wrong." }")
-                    _state.value = UsersState.Error("Error: ${ result.response ?: "Something went wrong." }")
+                    _state.value = Error("Error: ${ result.response ?: "Something went wrong." }")
                 }
             }
         }

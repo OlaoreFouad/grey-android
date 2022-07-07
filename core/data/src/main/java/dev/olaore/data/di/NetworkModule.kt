@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import dev.olaore.data.network.GitHubInterceptor
 import dev.olaore.data.network.GitHubService
 import dev.olaore.data.util.Constants
 import javax.inject.Singleton
@@ -37,12 +38,15 @@ class NetworkModule {
     }
 
     @Provides
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideOkHttpClient(
+        gitHubInterceptor: GitHubInterceptor
+    ): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
         return OkHttpClient.Builder()
             .addInterceptor(interceptor)
+            .addInterceptor(gitHubInterceptor)
             .build()
     }
 
