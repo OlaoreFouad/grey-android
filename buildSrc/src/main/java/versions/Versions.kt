@@ -30,4 +30,6 @@ object Versions {
 
     const val circleImageView = "3.1.0"
     const val glide = "4.13.2"
+
+    const val mockitoCore = "3.+"
 }

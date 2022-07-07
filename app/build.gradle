@@ -60,6 +60,9 @@ dependencies {
     implementation Dependencies.legacySupport
 
     testImplementation TestDependencies.junit
+    testImplementation TestDependencies.mockitoCore
+    testImplementation TestDependencies.archCoreTesting
+    testImplementation TestDependencies.kotlinCoroutinesTest
     androidTestImplementation AndroidTestDependencies.junit
     androidTestImplementation AndroidTestDependencies.espresso
 
