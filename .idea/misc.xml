@@ -11,6 +11,8 @@
         <entry key="app/src/main/res/drawable/bg_light_teal.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_round_black.xml" value="0.179" />
         <entry key="app/src/main/res/drawable/bg_round_brown.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_round_grey.xml" value="0.23" />
+        <entry key="app/src/main/res/drawable/ic_chevron_back.xml" value="0.2495" />
         <entry key="app/src/main/res/drawable/ic_user_teal.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/item_home_state.xml" value="0.1275" />
         <entry key="app/src/main/res/drawable/item_repos_state.xml" value="0.1275" />
@@ -23,7 +25,9 @@
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/item_repository.xml" value="0.48254620123203285" />
+        <entry key="app/src/main/res/layout/item_topic_chip.xml" value="0.40989583333333335" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.4244791666666667" />
+        <entry key="app/src/main/res/layout/item_user_repository.xml" value="0.5" />
         <entry key="app/src/main/res/menu/home_menu.xml" value="0.4244791666666667" />
       </map>
     </option>

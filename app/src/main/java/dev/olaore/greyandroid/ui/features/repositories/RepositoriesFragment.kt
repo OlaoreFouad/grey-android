@@ -23,7 +23,7 @@ class RepositoriesFragment : Fragment() {
 
     private val viewModel: RepositoriesViewModel by viewModels()
 
-    private val repositoriesAdapter = RepositoriesAdapter()
+    private lateinit var repositoriesAdapter: RepositoriesAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +46,7 @@ class RepositoriesFragment : Fragment() {
             viewModel.getRepositories(query)
         }
 
+        repositoriesAdapter = RepositoriesAdapter(requireContext())
         binding.repositoriesList.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = repositoriesAdapter

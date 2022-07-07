@@ -11,7 +11,7 @@ class GitHubInterceptor @Inject constructor(): Interceptor {
         val newRequest = req.newBuilder()
             .header(
                 "Authorization",
-                "token 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"
+                "67a38e51baa42a7c5d5b:b7b295836fd6e01ec3eef4d7cb380ad0fa4045c1"
             )
             .build()
 

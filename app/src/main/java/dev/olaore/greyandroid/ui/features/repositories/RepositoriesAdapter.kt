@@ -1,5 +1,6 @@
 package dev.olaore.greyandroid.ui.features.repositories
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,9 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.olaore.domain.models.repositories.Repository
 import dev.olaore.greyandroid.databinding.ItemRepositoryBinding
 import dev.olaore.greyandroid.ui.common.adapters.addOwnerSpan
+import dev.olaore.greyandroid.util.ChipsHelper
+import dev.olaore.greyandroid.util.isVisible
 import dev.olaore.greyandroid.util.loadImage
 
-class RepositoriesAdapter : ListAdapter<Repository, RepositoriesAdapter.RepositoryViewHolder>(
+class RepositoriesAdapter(
+    private val context: Context
+) : ListAdapter<Repository, RepositoriesAdapter.RepositoryViewHolder>(
     RepositoryDiffUtilCallback
 ) {
 
@@ -29,9 +34,11 @@ class RepositoriesAdapter : ListAdapter<Repository, RepositoriesAdapter.Reposito
 
     override fun getItemCount(): Int = currentList.size
 
-    class RepositoryViewHolder(
+    inner class RepositoryViewHolder(
         private val binding: ItemRepositoryBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        private var chipsHelper: ChipsHelper = ChipsHelper(context, binding.topicsGroup)
 
         fun bind(item: Repository) {
             binding.apply {
@@ -41,6 +48,13 @@ class RepositoriesAdapter : ListAdapter<Repository, RepositoriesAdapter.Reposito
                 repositoryStars.text = item.stars.toString()
                 repositoryLang.text = item.lang
                 repositoryDescription.text = item.description
+
+                item.topics.forEach { topic ->
+                    val chip = chipsHelper.createChip(topic)
+                    topicsGroup.addView(chip)
+                }
+                topicsGroup.isVisible(item.topics.isNotEmpty())
+
             }
         }
 

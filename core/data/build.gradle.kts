@@ -4,10 +4,9 @@ import dependencies.AnnotationProcessing
 
 apply(from = "../../config/android_library_build.gradle")
 
-plugins {
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
-}
+apply(plugin="kotlin-kapt")
+apply(plugin="dagger.hilt.android.plugin")
+
 
 dependencies {
     "implementation"(project(Modules.domain))

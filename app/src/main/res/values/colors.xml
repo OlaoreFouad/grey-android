@@ -11,4 +11,7 @@
     <color name="colorPurple">#62006A</color>
     <color name="colorBlue">#408AAA</color>
     <color name="colorGrey">#727272</color>
+    <color name="colorGray">#F1F1F1</color>
+    <color name="colorTopic">#E8F9FF</color>
+    <color name="colorTopicText">#408AAA</color>
 </resources>

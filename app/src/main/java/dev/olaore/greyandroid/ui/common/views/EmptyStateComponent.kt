@@ -32,8 +32,10 @@ class EmptyStateComponent @JvmOverloads constructor(
         try {
             val typedArray = ctx.obtainStyledAttributes(attributeSet, R.styleable.EmptyStateComponent)
             val text = typedArray.getString(R.styleable.EmptyStateComponent_emptyText).toString()
+            val imageRes = typedArray.getResourceId(R.styleable.EmptyStateComponent_emptyImage, R.drawable.ic_empty_search_state)
 
             emptyText.text = text
+            emptyImage.setImageResource(imageRes)
 
             typedArray.recycle()
         } catch (ex: Exception) {

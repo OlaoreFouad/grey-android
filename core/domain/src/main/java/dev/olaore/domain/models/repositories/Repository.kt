@@ -7,7 +7,7 @@ data class Repository(
     val owner: String,
     val imageUrl: String,
     val description: String,
-    val tags: String,
+    val topics: List<String>,
     val stars: Int,
     val lang: String
 )

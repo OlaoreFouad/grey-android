@@ -7,5 +7,6 @@ data class User(
     val bio: String,
     val location: String,
     val email: String,
-    val id: Int
+    val id: Int,
+    val userUrl: String
 )

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.olaore.greyandroid.R
@@ -16,13 +17,16 @@ import dev.olaore.greyandroid.util.showToast
 
 @AndroidEntryPoint
 class UsersFragment : Fragment() {
+
     private var _binding: FragmentUsersBinding? = null
     val binding: FragmentUsersBinding
         get() = _binding!!
 
     private val viewModel: UsersViewModel by viewModels()
 
-    private val usersAdapter = UsersAdapter()
+    private val usersAdapter = UsersAdapter(onUserClicked = { url ->
+        navigateToUserScreen(url)
+    })
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -74,6 +78,12 @@ class UsersFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun navigateToUserScreen(userUrl: String) {
+        findNavController().navigate(
+            UsersFragmentDirections.actionUsersFragmentToUserFragment(userUrl)
+        )
     }
 
     override fun onDestroy() {

@@ -14,7 +14,9 @@ import dev.olaore.greyandroid.ui.common.adapters.addOwnerSpan
 import dev.olaore.greyandroid.util.isVisible
 import dev.olaore.greyandroid.util.loadImage
 
-class UsersAdapter : ListAdapter<User, UsersAdapter.UserViewHolder>(
+class UsersAdapter(
+    private val onUserClicked: (String) -> Unit
+) : ListAdapter<User, UsersAdapter.UserViewHolder>(
     UserDiffUtilCallback
 ) {
 
@@ -22,7 +24,7 @@ class UsersAdapter : ListAdapter<User, UsersAdapter.UserViewHolder>(
         return UserViewHolder(
             ItemUserBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
-            )
+            ), onUserClicked
         )
     }
 
@@ -34,7 +36,8 @@ class UsersAdapter : ListAdapter<User, UsersAdapter.UserViewHolder>(
     override fun getItemCount(): Int = currentList.size
 
     class UserViewHolder(
-        private val binding: ItemUserBinding
+        private val binding: ItemUserBinding,
+        private val onUserClicked: (String) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: User) {
@@ -54,9 +57,10 @@ class UsersAdapter : ListAdapter<User, UsersAdapter.UserViewHolder>(
                         R.string.user_details, item.location, item.email
                     )
                 }
+
+                root.setOnClickListener { onUserClicked.invoke(item.userUrl) }
             }
         }
-
     }
 }
 
