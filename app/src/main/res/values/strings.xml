@@ -6,4 +6,6 @@
     <string name="repositories">Repositories</string>
     <string name="users">Users</string>
     <string name="search">Search</string>
+    <string name="no_data_available">No data available</string>
+    <string name="search_github">Search Github for repositories, issues and pull requests!</string>
 </resources>

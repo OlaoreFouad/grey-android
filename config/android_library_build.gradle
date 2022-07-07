@@ -1,0 +1,40 @@
+import dependencies.Dependencies
+import dependencies.TestDependencies
+import dependencies.AndroidTestDependencies
+import dependencies.Application
+
+apply plugin: "com.android.library"
+apply plugin: "org.jetbrains.kotlin.android"
+
+android {
+    compileSdk = Application.compileSdk
+
+    defaultConfig {
+        minSdk = Application.minSdk
+        targetSdk = Application.targetSdk
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.ktxCore
+    implementation Dependencies.appCompat
+    implementation Dependencies.googleMaterial
+    implementation Dependencies.constraintLayout
+    implementation Dependencies.legacySupport
+
+    testImplementation TestDependencies.junit
+    androidTestImplementation AndroidTestDependencies.junit
+    androidTestImplementation AndroidTestDependencies.espresso
+}

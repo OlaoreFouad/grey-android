@@ -9,7 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="dev.olaore.greyandroid.ui.features.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_repositoriesFragment"
+            app:destination="@id/repositoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/usersFragment"
         android:name="dev.olaore.greyandroid.ui.features.users.UsersFragment"

@@ -5,4 +5,9 @@
         <attr name="inputPlaceholder" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="EmptyStateComponent">
+        <attr name="emptyText" format="string" />
+        <attr name="emptyImage" format="reference"/>
+    </declare-styleable>
+
 </resources>

@@ -1,11 +1,15 @@
 import dependencies.Dependencies
+import dependencies.Modules
 import dependencies.TestDependencies
 import dependencies.AndroidTestDependencies
 import dependencies.Application
+import dependencies.AnnotationProcessing
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -39,7 +43,14 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
+
+    implementation project(Modules.domain)
+    implementation project(Modules.data)
 
     implementation Dependencies.ktxCore
     implementation Dependencies.appCompat
@@ -51,7 +62,23 @@ dependencies {
     androidTestImplementation AndroidTestDependencies.junit
     androidTestImplementation AndroidTestDependencies.espresso
 
+    // navigation component.
     implementation Dependencies.navigationFragmentKtx
     implementation Dependencies.navigationUiKtx
+
+    // dagger hilt.
+    implementation Dependencies.daggerHilt
+    kapt AnnotationProcessing.daggerHiltCompiler
+
+    // ktx
+    implementation Dependencies.fragmentKtx
+    implementation Dependencies.activityKtx
+
+    // circle image view
+    implementation Dependencies.circleImageView
+
+    // glide
+    implementation Dependencies.glide
+    annotationProcessor AnnotationProcessing.glideCompiler
 
 }

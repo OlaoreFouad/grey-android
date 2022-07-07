@@ -10,21 +10,24 @@
         <entry key="app/src/main/res/drawable/bg_light_purple.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_light_teal.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_round_black.xml" value="0.179" />
+        <entry key="app/src/main/res/drawable/bg_round_brown.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_user_teal.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/item_home_state.xml" value="0.1275" />
         <entry key="app/src/main/res/drawable/item_repos_state.xml" value="0.1275" />
         <entry key="app/src/main/res/drawable/item_users_state.xml" value="0.1275" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/component_empty_state.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/component_grey_search.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_repositories.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_repositories.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.4244791666666667" />
+        <entry key="app/src/main/res/layout/item_repository.xml" value="0.48254620123203285" />
         <entry key="app/src/main/res/menu/home_menu.xml" value="0.4244791666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
