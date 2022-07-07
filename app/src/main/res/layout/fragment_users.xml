@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.features.users.UsersFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello users fragment" />
+        tools:context=".ui.features.users.UsersFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/page_heading"
+            style="@style/PageHeadingStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/users"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <dev.olaore.greyandroid.ui.common.views.GreySearchComponent
+            android:id="@+id/search_users"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:inputPlaceholder="Search for users..."
+            app:layout_constraintTop_toBottomOf="@id/page_heading" />
+
+        <dev.olaore.greyandroid.ui.common.views.EmptyStateComponent
+            android:id="@+id/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:emptyText="@string/search_users"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_users" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/users_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_users"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_repository" />
+
+        <ProgressBar
+            android:layout_width="@dimen/dimen_progress_bar_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:id="@+id/loading_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="@dimen/dimen_progress_bar_size" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -21,6 +21,7 @@
         android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:id="@+id/empty_text"
+        android:padding="10dp"
         tools:text="Search Github for repositories, issues and pull requests!" />
 
 </LinearLayout>

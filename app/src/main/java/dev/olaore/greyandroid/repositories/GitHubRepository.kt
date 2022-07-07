@@ -4,6 +4,7 @@ import dev.olaore.domain.common.Result
 import dev.olaore.domain.datasources.network.NetworkRepositoryDataSource
 import dev.olaore.domain.datasources.network.NetworkUserDataSource
 import dev.olaore.domain.models.repositories.Repository
+import dev.olaore.domain.models.users.User
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +22,10 @@ class GitHubRepository @Inject constructor(
         }
     }
 
-    suspend fun getUsers(query: String) {
+    suspend fun getUsers(query: String): Result<List<User>> {
+        return withContext(Dispatchers.IO) {
+            networkUserDataSource.getUsers(query)
+        }
     }
 
 }

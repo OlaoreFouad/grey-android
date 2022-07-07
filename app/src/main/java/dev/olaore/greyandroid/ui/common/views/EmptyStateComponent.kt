@@ -40,4 +40,8 @@ class EmptyStateComponent @JvmOverloads constructor(
             emptyText.text = ""
         }
     }
+
+    fun setEmptyText(text: String) {
+        emptyText.text = text
+    }
 }

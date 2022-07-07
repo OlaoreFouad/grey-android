@@ -63,6 +63,13 @@ class RepositoriesFragment : Fragment() {
                 is DisplayRepositories -> {
                     binding.repositoriesList.isVisible(state.repositories.isNotEmpty())
                     repositoriesAdapter.submitList(state.repositories)
+
+                    if (state.repositories.isEmpty()) {
+                        binding.emptyState.setEmptyText(
+                            requireContext().resources.getString(R.string.search_github_empty)
+                        )
+                    }
+
                 }
                 is Error -> {
                     showToast(state.message)
